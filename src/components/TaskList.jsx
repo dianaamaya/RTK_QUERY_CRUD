@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 import { useGetTasksQuery, useDeleteTaskMutation, useUpdateTaskMutation } from '../api/apiSlice'
@@ -23,7 +24,9 @@ export function TaskList() {
           Create Task
         </Link>
       </header> 
-      <div className="grid grid-cols-3 gap-3">
+      <div 
+        data-testid="tasks-list"
+        className="grid grid-cols-3 gap-3">
         {
           tasks.map(task => {
 

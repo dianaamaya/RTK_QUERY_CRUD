@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { v4 as uuid } from 'uuid'
 import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
@@ -43,8 +43,8 @@ export function TaskForm() {
         setValue("title", taskFound.title)
         setValue("description", taskFound.description)
         setValue("completed", taskFound.completed)
-      }
-    }, [params, tasks]);
+      } 
+    }, [setValue, params, tasks]);
 
   return (
     <form 

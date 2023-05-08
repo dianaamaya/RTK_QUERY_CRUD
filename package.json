@@ -7,7 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "back": "json-server --watch db/tasks.json --port 3000"
+    "server": "json-server --watch db/tasks.json --port 3000",
+    "serverTest": "json-server --watch db/testTasks.json --port 3000",
+    "test:open": "cypress open",
+    "test:run": "cypress run",
+    "lint": "eslint src/**/*.{js,jsx,json}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,json}"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": [
+      "cypress"
+    ]
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -25,8 +36,21 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.9.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-cypress": "^2.13.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
     "tailwindcss": "^3.3.1",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }
